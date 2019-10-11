@@ -1,1 +1,37 @@
 // Mixins Here
+
+.flex-mix(@justify: center, @align: center, @direction: row){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+}
+
+.navigation() {
+    text-decoration: none;
+    color: @nav-font;
+    font-size: 2rem;
+
+}
+
+.h1-heading{
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 2rem;
+
+}
+
+.button(@bg-color, @color, @width){
+    width: @width;
+    background-color: @bg-color;
+    color: @color;
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    padding: 8px 1.6rem;
+    
+
+
+
+
+}

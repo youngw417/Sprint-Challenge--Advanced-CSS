@@ -3,6 +3,23 @@
 .home {
 
   .intro {
+  
+
+    .img-cont{
+      /* @media @phone{
+        width: 100%;
+        overflow:hidden;
+      }
+ */
+      img{
+      border-radius: 10px;
+
+      @media @phone{
+        height: 150px;
+        border-radius: 2px;
+      }
+    }
+    }
 
     h2 {
       padding: 15px;
@@ -11,19 +28,70 @@
     p {
       padding:0 15px;
     }
+    @media @phone{
+      margin-bottom: 30px;
+    }
+    h2, p {
+      
+        @media @phone{
+          width: 90%;
+        }
   
+      
+    }
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
 
+    .space-img-cont{
+
+
+      
+      @media @phone{
+      padding: 1rem;
+      width: 90%;
+      .flex-mix(@direction: column);
+ 
+      overflow: hidden;
+   
+    
+    
+    }
+
+    .blast{
+      @media @phone{
+        
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        
+      }
+
+    } 
+
+    }
+    
+
+    .sky, .launch{
+      @media @phone {
+        display: none;
+    }
+
+    
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      }
+
+      
+      
     }
   }
 
@@ -42,12 +110,24 @@
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
+    padding: 50px 6rem;
     display: flex;
     justify-content: center;
 
+    @media @phone{
+      .flex-mix(@direction: column-reverse);
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
     .walk-text {
       width: 50%;
+      margin-right: 2.5rem;
+
+      @media @phone{
+        width: 90%;
+    
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -55,15 +135,44 @@
 
       p {
         margin-bottom: 26px;
+
+        
+        
+
+       
       }
 
       .btn {
+        .button(@header-font-color, white, 30%);
+        
+        @media @phone{
+          text-align: center;
+          width: 100%;
+          padding: 20px;
+          
+        }
+
+    
+  
+        &:hover{
+          .button(rgb(153, 151, 151), black, 30%)
+        }
       }
     }
 
     .walk-img {
       width: 46%;
-      margin-left: 4%;
+      //margin-left: 40%;
+
+      @media @phone{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 30px;
+       
+        
+      }
       
       img {
         width: 100%;

@@ -34,13 +34,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive website: We use fixed code such px while we are using media query.
+Responsive website: We used % unit with max-width property for setting width in our code with media query.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first: A develeper would start coding for mobile use and exand the applications to desktops using min-width property.
+Desktop first: A develeper would start coding for desktop use and exand the applications to mobile using max-width property.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+font size will change according to client(user)'s browser font size setting when we use 'font-size: 62.5%` in our html tag.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+We use a developer tool for our coding easier with preprocessing which extends regular css. it helps to organize our codes by visualizing nesting code and multiple preprocessor files divided into smaller files according to its functionality in website.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I like how we can nest our codes and work with smaller multiple less files to organize our codes.
+I had hard times to understand and use parametric mixin since this is very new concept to me.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
