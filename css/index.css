@@ -1,7 +1,7 @@
 .h1-heading {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -164,32 +164,55 @@ p {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 60px;
 }
-.home .intro .img-cont {
-  /* @media @phone{
-        width: 100%;
-        overflow:hidden;
-      }
- */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
-.home .intro .img-cont img {
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.home .intro {
+  padding-top: 25px;
+}
+.home .intro img {
   border-radius: 10px;
+  animation: moveInBottom 1s ease-out;
 }
 @media (max-width: 500px) {
-  .home .intro .img-cont img {
-    height: 150px;
+  .home .intro img {
+    width: 100%;
     border-radius: 2px;
+    padding-right: 2rem;
   }
 }
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
-  padding: 0 15px;
+  padding-bottom: 20px;
 }
 @media (max-width: 500px) {
   .home .intro {
     margin-bottom: 30px;
+    margin-left: 2rem;
   }
 }
 @media (max-width: 500px) {
@@ -203,6 +226,7 @@ p {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  animation: moveInRight 1s ease-out;
 }
 @media (max-width: 500px) {
   .home .space-images .space-img-cont {
@@ -215,12 +239,32 @@ p {
     overflow: hidden;
   }
 }
+.home .space-images .space-img-cont .blast {
+  transition: all 0.2s;
+}
+.home .space-images .space-img-cont .blast:hover {
+  outline: 1.5rem solid #55c57a;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
 @media (max-width: 500px) {
   .home .space-images .space-img-cont .blast {
     width: 100%;
     height: 100%;
     border-radius: 10px;
   }
+}
+.home .space-images .sky,
+.home .space-images .launch {
+  transition: all 0.2s;
+}
+.home .space-images .sky:hover,
+.home .space-images .launch:hover {
+  outline: 1.5rem solid #55c57a;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
 }
 @media (max-width: 500px) {
   .home .space-images .sky,
@@ -284,6 +328,7 @@ p {
   font-size: 1.8rem;
   border-radius: 5px;
   padding: 8px 1.6rem;
+  transition: all 1s;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {
@@ -292,7 +337,8 @@ p {
     padding: 20px;
   }
 }
-.home .walk .walk-text .btn:hover {
+.home .walk .walk-text .btn:hover,
+.home .walk .walk-text .btn active {
   width: 30%;
   background-color: #999797;
   color: black;
@@ -300,9 +346,12 @@ p {
   font-size: 1.8rem;
   border-radius: 5px;
   padding: 8px 1.6rem;
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .home .walk .walk-img {
   width: 46%;
+  animation: moveInRight 1s ease-out;
 }
 @media (max-width: 500px) {
   .home .walk .walk-img {
@@ -317,17 +366,28 @@ p {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: all 0.4s;
+}
+.home .walk .walk-img img:hover {
+  outline: 1.5rem solid #55c57a;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
 }
 .top-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background-color: #F6F6F6;
   padding-bottom: 10px;
   border-bottom: 2px solid #F1F1F1;
+  height: 7vh;
+  position: fixed;
+  transform: translateY(-60px);
+  opacity: 0.7;
 }
 @media (max-width: 500px) {
   .top-nav {
@@ -335,9 +395,9 @@ p {
   }
 }
 .top-nav h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   color: #23293B;
 }
 .top-nav nav {
@@ -355,7 +415,7 @@ p {
 .top-nav nav .navi {
   text-decoration: none;
   color: #454A59;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 @media (max-width: 500px) {
   .top-nav nav .navi {

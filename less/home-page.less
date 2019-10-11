@@ -1,35 +1,58 @@
 // Home Content
+// amination
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+  
+
+    @keyframes moveInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(10rem); }
+      80% {
+        transform: translateX(-1rem); }
+      100% {
+        opacity: 1;
+        transform: translate(0); } }
+    
+
+// animation end
 
 .home {
 
   .intro {
   
-
-    .img-cont{
-      /* @media @phone{
-        width: 100%;
-        overflow:hidden;
-      }
- */
+    padding-top: 25px;
+    
+  
       img{
       border-radius: 10px;
+      animation: moveInBottom 1s ease-out; 
 
       @media @phone{
-        height: 150px;
+        width: 100%;
         border-radius: 2px;
+        padding-right: 2rem;
       }
     }
-    }
+    
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+    
+      padding-bottom: 20px;
     }
     @media @phone{
       margin-bottom: 30px;
+      margin-left: 2rem;
+
     }
     h2, p {
       
@@ -46,23 +69,31 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    animation: moveInRight 1s ease-out; 
+   
 
     .space-img-cont{
 
 
       
+
       @media @phone{
       padding: 1rem;
       width: 90%;
       .flex-mix(@direction: column);
  
       overflow: hidden;
-   
-    
-    
-    }
+      }
 
     .blast{
+
+      transition: all 0.2s;
+      &:hover{
+        outline: 1.5rem solid #55c57a;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+        z-index: 20; 
+      }
       @media @phone{
         
         width: 100%;
@@ -70,13 +101,23 @@
         border-radius: 10px;
         
       }
-
     } 
+    
 
     }
     
 
     .sky, .launch{
+
+      transition: all 0.2s;
+      &:hover{
+    
+      // box animation
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; 
+      }
       @media @phone {
         display: none;
     }
@@ -87,6 +128,7 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      
 
       }
 
@@ -144,7 +186,7 @@
 
       .btn {
         .button(@header-font-color, white, 30%);
-        
+        transition: all 1s;
         @media @phone{
           text-align: center;
           width: 100%;
@@ -154,8 +196,10 @@
 
     
   
-        &:hover{
-          .button(rgb(153, 151, 151), black, 30%)
+        &:hover, active{
+          .button(rgb(153, 151, 151), black, 30%);
+          transform: translateY(-10px) scale(1.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -163,6 +207,8 @@
     .walk-img {
       width: 46%;
       //margin-left: 40%;
+      animation: moveInRight 1s ease-out; 
+      
 
       @media @phone{
         width: 100%;
@@ -178,6 +224,17 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+        transition: all 0.4s;
+
+        //box animation
+        &:hover{
+          outline: 1.5rem solid #55c57a;
+          transform: scale(1.05) translateY(-0.5rem);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          z-index: 20; 
+        }
+
+        
       }
     }
   }
